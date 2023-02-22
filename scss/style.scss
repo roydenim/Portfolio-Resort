@@ -1,0 +1,314 @@
+@import "colors";
+@import "animate";
+
+
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-padding-top: 82px;
+}
+body {
+	position: relative;
+	font-family: "Montserrat", sans-serif;
+	background-color: #333;
+	color: $main-color;
+}
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+.underline {
+	margin: 0 auto 40px;
+	width: 100px;
+	height: 4px;
+	background-color: $main-color;
+}
+.shadow-bg{
+	background-color: rgba($color: #000000, $alpha: .8);
+}
+nav {
+	text-transform: uppercase;
+	transition: background-color .6s;
+	.nav-link {
+		font-size: 21px;
+		color: white;
+	}
+	.nav-link:hover {
+		color: #d17d00
+	}
+	.active {
+		color: #d17d00 !important;
+	}
+	.navbar-brand {
+		font-size: 21px;
+		font-weight: bold;
+		color: white;
+		transition: color 0.3s;
+	}
+	.navbar-brand:hover {
+		color: #d17d00;
+	}
+	.fa-bars {
+		padding: 10px;
+		color: white;
+	}
+	.fa-spa {
+		padding: 10px;
+	}
+	z-index: 1;
+	transition: background-color 0.6s;
+}
+
+header {
+	color: white;
+	h1 {
+		text-transform: uppercase;
+		font-size: 45px;
+	}
+	p {
+		font-size: 20px;
+	}
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url("../img/The\ Wellhall.small.jpg");
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+	.hero-text {
+		font-family: "Playfair Display", serif;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 10px;
+		height: 100vh;
+	}
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+	.fa-chevron-down{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 40px;
+		color: white;
+		font-size: 30px;
+	}
+}
+
+// ABOUT US
+.aboutus {
+	padding: 10px;
+}
+
+.img-aboutus {
+	height: 500px;
+	width: 400px;
+	margin-top: 30px;
+	border-radius: 10px;
+	background-image: url("../img/spa.small.jpg");
+	background-position: center;
+	background-size: cover;
+}
+.text-aboutus {
+	h3 {
+		font-size: 26px;
+		padding: 30px 0;
+	}
+	p {
+		text-align: justify;
+	}
+}
+
+// ACCOMMODATIONS
+
+.accommodations {
+	.card {
+		margin: 20px;
+		height: 400px;
+		padding: 0;
+		h3 {
+			padding-top: 20px;
+		}
+	}
+	.accommodation-describe {
+		margin: 50px 0;
+		h3 {
+			font-size: 30px;
+			padding-bottom: 20px;
+		}
+		p {
+			font-size: 18px;
+		}
+	}
+	.carousel-item {
+		position: relative;
+	}
+	.carousel-caption {
+		position: absolute;
+		right: 0;
+		left: 0;
+		padding: 40px 0;
+		background-color: rgba($color: #000000, $alpha: 0.4);
+	}
+}
+
+// PROMOS AND OFFERS
+
+.offers{
+	.offers-item{
+		margin: 30px 0;
+		i{
+			font-size: 36px;
+		}
+		h3{
+			font-size: 26px;
+			padding: 10px;
+		}
+	}
+}
+
+// OPINIONS
+
+.opinions{
+	color: white;
+	.opinion-img{
+		position: relative;
+		background-image: url("../img/opinion.big.jpg");
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+	.opinon-text{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 10px;
+	}
+	.opinion-item{
+		font-family: "Playfair Display", serif;
+	}
+	i{
+		font-size: 36px;
+		padding-top: 20px;
+	}
+	p{
+		font-size: 18px;
+		padding: 10px 20px;
+	}
+}
+
+// CONTACT
+
+.contact {
+	i{
+		padding: 10px;
+	}
+	.contact-us {
+		display: flex;
+		align-items: center;
+	}
+	.contact-item {
+		margin: 30px 0;
+		h3 {
+			font-weight: bold;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+		.social-media {
+			font-size: 26px;
+			a {
+				color: $main-color;
+				padding: 10px;
+				transition: color .3s;
+			}
+			a:hover{
+				color: #3267d8;
+			}
+		}
+	}
+}
+
+footer{
+	background-color: $main-color;
+}
+
+
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 55px;
+		}
+		p {
+			font-size: 30px;
+		}
+	}
+}
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 60px;
+		}
+		p {
+			font-size: 35px;
+		}
+	}
+	.text-aboutus {
+		h3 {
+			font-size: 30px;
+			padding: 15px 0;
+		}
+		p {
+			text-align: justify;
+			font-size: 20px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	html {
+		scroll-padding-top: 72px;
+	}
+	header {
+		h1 {
+			font-size: 70px;
+		}
+		p {
+			font-size: 40px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		.hero-img {
+			background-image: url("../img/The\ Wellhall.big.jpg");
+		}
+	}
+	header {
+		h1 {
+			font-size: 80px;
+		}
+		p {
+			font-size: 40px;
+		}
+	}
+	.text-aboutus {
+		width: 50%;
+		margin: 100px 0;
+	}
+	.img-aboutus {
+		background-image: url("../img/spa.big.jpg");
+	}
+}
